@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 93%;
+    --foreground: 0 0% 5%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 355 83% 28%;
+    --primary-foreground: 0 0% 93%;
+    --secondary: 143 66% 10%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 37 80% 56%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 142.1 76.2% 36.3%;
+    --radius: 0.75rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 15%;
+    --foreground: 0 0% 93%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 355 83% 28%;
+    --primary-foreground: 144.9 80.4% 10%;
+    --secondary: 143 66% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 37 80% 56%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142.4 71.8% 29.2%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('../app/fonts/helvetica-255-webfont/Helvetica.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url('../app/fonts/helvetica-255-webfont/Helvetica-Bold.woff')
+    format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Light';
+  src: url('../app/fonts/4215-font.otf') format('opentype');
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background font-sans text-background;
+  }
+}
+
+body {
+  font-family: 'Helvetica';
+}
+
+.bold {
+  font-family: 'Helvetica Bold';
+}
+
+.light {
+  font-family: 'Helvetica Light';
+}
+
+.home-bg {
+  background-image: url('/imgs/hero-home.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.about-bg {
+  background-image: url('/imgs/hero-about.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cria-bg {
+  background-image: url('/imgs/hero-cria.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.polo-bg {
+  background-image: url('/imgs/hero-polo.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tech-bg {
+  background-image: url('/imgs/hero-tech.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ecofriendly-bg {
+  background-image: url('/imgs/ecofriendly.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.field-bg {
+  background-image: url('/imgs/field.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nosotros-bg {
+  background-image: url('/imgs/nosotros-patas.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.manada-bg {
+  background-image: url('/imgs/manada.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
