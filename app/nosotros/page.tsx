@@ -225,7 +225,7 @@ const About = () => {
           >
             <Image src={panels} alt='' />
           </motion.div>
-          <div className='flex gap-32 py-12 text-xl text-foreground'>
+          <div className='flex flex-col gap-8 py-12 text-xl text-foreground md:flex-row md:gap-32'>
             <motion.p
               initial={{ translateY: 20, opacity: 0 }}
               whileInView={{ translateY: 0, opacity: 1 }}
@@ -266,7 +266,7 @@ const About = () => {
             whileInView={{ translateY: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className='light w-2/3 text-center text-4xl italic'
+            className='light text-center text-3xl italic md:w-2/3 md:text-4xl'
           >
             Somos sinónimo de pasión, innovación, trabajo en equipo y cuidado
             del medio ambiente.
