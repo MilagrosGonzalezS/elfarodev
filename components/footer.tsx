@@ -59,7 +59,7 @@ export default function Footer() {
             <EnvelopeClosedIcon color='#292929'></EnvelopeClosedIcon>
           </Link>
           <Link
-            href=''
+            href='https://www.instagram.com/elfaropolo/'
             className='flex h-8 w-8 items-center justify-center rounded-full bg-white p-2'
           >
             <FontAwesomeIcon
@@ -69,7 +69,7 @@ export default function Footer() {
             />
           </Link>
           <Link
-            href=''
+            href='https://www.facebook.com/elfaropolo'
             className='flex h-8 w-8 items-center justify-center rounded-full bg-white p-2'
           >
             <FontAwesomeIcon
@@ -79,7 +79,7 @@ export default function Footer() {
             />
           </Link>
           <Link
-            href=''
+            href='https://www.youtube.com/channel/UCnzek2stB0nJQVWcky6p1fQ'
             className='flex h-8 w-8 items-center justify-center rounded-full bg-white p-2'
           >
             <FontAwesomeIcon icon={faYoutube} color='#292929' className='w-4' />
