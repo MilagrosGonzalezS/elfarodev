@@ -124,7 +124,7 @@ export default function Footer() {
               />
 
               {/* Botón de envío */}
-              <Button className='w-full' type='submit' variant='accent'>
+              <Button type='submit' variant='accent'>
                 {form.formState.isSubmitting ? (
                   <>
                     {/* <Spinner /> */}
