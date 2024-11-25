@@ -53,9 +53,9 @@ export default function RootLayout({
         <Providers>
           <Header />
           <main className='grow'>{children}</main>
-          <Link href='https://wa.me/1153134245'>
+          <Link href='https://wa.me/+5491122726388'>
             <div className='fixed bottom-10 right-10 flex h-16 w-16 items-center justify-center rounded-full bg-secondary transition hover:scale-110'>
-              <FontAwesomeIcon icon={faWhatsapp} className='w-8 h-8' />
+              <FontAwesomeIcon icon={faWhatsapp} className='h-8 w-8' />
             </div>
           </Link>
           <Footer />
