@@ -8,6 +8,9 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 
 import './globals.css'
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -50,6 +53,11 @@ export default function RootLayout({
         <Providers>
           <Header />
           <main className='grow'>{children}</main>
+          <Link href='https://wa.me/1153134245'>
+            <div className='fixed bottom-10 right-10 flex h-16 w-16 items-center justify-center rounded-full bg-secondary transition hover:scale-110'>
+              <FontAwesomeIcon icon={faWhatsapp} className='w-8 h-8' />
+            </div>
+          </Link>
           <Footer />
         </Providers>
       </body>
