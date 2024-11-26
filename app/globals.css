@@ -105,14 +105,14 @@ body {
 }
 
 .about-bg {
-  background-image: url('/imgs/hero-about.webp');
+  background-image: url('/imgs/field.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .cria-bg {
-  background-image: url('/imgs/hero-cria.webp');
+  background-image: url('/imgs/toros.jpeg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -140,7 +140,7 @@ body {
 }
 
 .field-bg {
-  background-image: url('/imgs/field.webp');
+  background-image: url('/imgs/palta.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -154,7 +154,14 @@ body {
 }
 
 .manada-bg {
-  background-image: url('/imgs/manada.webp');
+  background-image: url('/imgs/hero-cria.webp');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.members-bg {
+  background-image: url('/imgs/hero-about.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

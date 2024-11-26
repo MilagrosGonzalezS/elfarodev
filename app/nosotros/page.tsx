@@ -8,8 +8,8 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 
 import image1 from '@/public/imgs/nosotros.webp'
-import image2 from '@/public/imgs/nosotros.webp'
-import image3 from '@/public/imgs/nosotros.webp'
+import image2 from '@/public/imgs/nosotros2.webp'
+import image3 from '@/public/imgs/nosotros3.webp'
 import Image from 'next/image'
 import hereford from '@/public/imgs/hereford.webp'
 import aap from '@/public/imgs/aap.webp'

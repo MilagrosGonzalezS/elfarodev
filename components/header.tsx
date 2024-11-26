@@ -22,7 +22,12 @@ export default function Header() {
     <header className='absolute inset-x-0 top-0 z-50 bg-transparent py-8'>
       <nav className='container flex items-start justify-between'>
         <Link href='/'>
-          <Image className='w-16' src={Logo} alt='El Faro logo' priority />
+          <Image
+            className='w-16 md:w-20'
+            src={Logo}
+            alt='El Faro logo'
+            priority
+          />
         </Link>
         <ul className='hidden items-center gap-14 text-sm font-medium sm:flex'>
           <li>
@@ -59,6 +64,12 @@ export default function Header() {
           </li>
         </ul>
         <div className='flex items-center justify-between gap-6'>
+          <Link
+            className='bold hidden rounded-sm bg-gray-400/30 px-6 py-2 hover:bg-gray-400/70 sm:flex'
+            href='/members'
+          >
+            Members Only
+          </Link>
           {/* <ThemeToggle /> */}
           <Sheet>
             <SheetTrigger className='sm:hidden'>
@@ -86,6 +97,12 @@ export default function Header() {
                     <Link href='/tech'>Tecnología</Link>
                   </SheetClose>
                 </li>
+                <Link
+                  className='bold mt-8 rounded-sm bg-gray-400/30 px-6 py-2 text-center hover:bg-gray-400/70'
+                  href='/members'
+                >
+                  Members Only
+                </Link>
               </ul>
             </SheetContent>
           </Sheet>
