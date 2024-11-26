@@ -29,7 +29,7 @@ export default function Header() {
             priority
           />
         </Link>
-        <ul className='hidden items-center gap-14 text-sm font-medium sm:flex'>
+        <ul className='mt-2 hidden items-center gap-14 text-sm font-medium sm:flex'>
           <li>
             <Link
               className={`rounded-sm px-6 py-2 transition hover:bg-gray-400/30 ${pathname === '/nosotros' ? 'bg-gray-400/30' : ''}`}
@@ -63,9 +63,10 @@ export default function Header() {
             </Link>
           </li>
         </ul>
+
         <div className='flex items-center justify-between gap-6'>
           <Link
-            className='bold hidden rounded-sm bg-gray-400/30 px-6 py-2 hover:bg-gray-400/70 sm:flex'
+            className='bold hidden rounded-sm bg-gray-400/30 px-6 py-2 text-sm hover:bg-gray-400/70 sm:flex'
             href='/members'
           >
             Members Only
