@@ -98,12 +98,21 @@ export default function Header() {
                     <Link href='/tech'>Tecnología</Link>
                   </SheetClose>
                 </li>
-                <Link
-                  className='bold mt-8 rounded-sm bg-gray-400/30 px-6 py-2 text-center hover:bg-gray-400/70'
-                  href='/members'
-                >
-                  Members Only
-                </Link>
+                <li className='border-b-2 border-muted-foreground py-4'>
+                  <SheetClose asChild>
+                    <Link href='/tech'>Tecnología</Link>
+                  </SheetClose>
+                </li>
+                <li className='w-full py-4'>
+                  <SheetClose asChild>
+                    <Link
+                      className='bold block rounded-sm bg-gray-400/30 px-6 py-2 text-center'
+                      href='/members'
+                    >
+                      Members Only
+                    </Link>
+                  </SheetClose>
+                </li>
               </ul>
             </SheetContent>
           </Sheet>
