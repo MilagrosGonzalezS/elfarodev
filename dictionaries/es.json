@@ -1,0 +1,119 @@
+{
+  "navigation": {
+    "about": "Nosotros",
+    "breed": "Cría",
+    "polo": "Polo",
+    "tech": "Tecnología"
+  },
+  "page": {
+    "home": {
+      "title": "Una nueva temporada de verano comienza",
+      "subtitle": "El Faro Polo está ubicado en Gral. Lavalle, a 3 minutos de la playa, muy cerca de Costa Esmeralda, Pinamar y Cariló, y a 4 horas de la ciudad de Buenos Aires.",
+      "club": "Club Oficial",
+      "aap": " de la Asociación Argentina de Polo (AAP)",
+      "redp1": "2 canchas de polo oficiales",
+      "redp2": "Lugar para +200 caballos",
+      "ecofriendly1": "Somos el primer campo deportivo",
+      "ecofriendly2": " eco friendly",
+      "ecofriendly3": " con riego por energía renovable"
+    },
+    "about": {
+      "title": "Nosotros",
+      "subtitle1": {
+        "1": "El FARO es un ",
+        "2": "equipo de profesionales ",
+        "3": "dedicados a la permanente búsqueda de la excelencia, aplicando conocimientos e innovación en cada actividad que se realiza."
+      },
+      "subtitle2": {
+        "1": "El objetivo inicial fue ",
+        "2": "lograr un establecimiento para cría de equinos y bovinos, ",
+        "3": "enfocándonos en la raza Polo Argentino y también en la raza Hereford. Trabajando siempre con altos estándares en el cuidado animal, la nutrición y la mejora genética."
+      },
+      "carousel": "En la constante búsqueda por mejorar ambas actividades, trabajamos estrechamente con la AACH (Asociación Argentina Criadores de Hereford) y también hemos destinado un área para el desarrollo del Polo, siendo hoy El Faro un club oficial de la AAP (Asociación Argentina de Polo).",
+      "challenge": {
+        "1": "NUESTRO",
+        "2": "desafío",
+        "3": "Mejorar el suelo arenoso existente para lograr una oferta forrajera a medida de la calidad de nuestros planteles. Se trabaja con gran dedicación en verdeos y pasturas para lograr la correcta nutrición."
+      },
+      "palta": {
+        "1": "Con el mismo ánimo y pasión que nos caracteriza desde el origen de EL FARO, también incursionamos en la producción de palta en su variedad Hass. ",
+        "2": "Somos el único establecimiento en la zona que ha aplicado el trabajo de un gran equipo para innovar en sus cultivos, ",
+        "3": "logrando una vez más marcar el camino de la búsqueda constante de la excelencia productiva."
+      },
+      "panels": {
+        "1": "La ",
+        "2": "tecnología ",
+        "3": "es una herramienta en la cual nos apoyamos constantemente, utilizándola como base del crecimiento a largo plazo.",
+        "4": "Nuestra misión es ser sustentables ",
+        "5": "en el tiempo, protegiendo cuidadosamente el medioambiente.",
+        "6": "La generación de energía renovable, ",
+        "7": "utilizando los más modernos instrumentos, nos ha permitido dar un paso hacia un futuro prometedor para las ",
+        "8": "mejoras continuas de nuestros recursos naturales."
+      },
+      "passion": "Somos sinónimo de pasión, innovación, trabajo en equipo y cuidado del medio ambiente."
+    },
+    "breed": {
+      "title": "Cría",
+      "subtitle": {
+        "1": "LA CRIA de la",
+        "2": " raza equina Polo Argentino",
+        "3": " y la raza bovina Hereford, nos conduce a trabajar en cada detalle del proceso."
+      },
+      "parag1": "Trabajamos en cada etapa junto con nuestros equipos de ingenieros agrónomos y veterinarios, combinando la pasión por mejorar día a día nuestra genética. A través de la mejora nutricional, con inversiones sustentables en nuestros forrajes para las etapas de preñez, y el cuidado de cada animal desde su gestación, hemos logrado producir ejemplares de primer nivel.",
+      "parag2": "Haciendo una selección cuidadosa de nuestra cría junto a la Asociación Argentina Criadores de Hereford EL FARO se ha convertido en un referente en la zona por sus Toros y Vaquillonas Puro Registrado, afianzando la raza y logrando planteles de gran categoría.",
+      "parag3": {
+        "1": "El manejo de las manadas de caballos, combinando genética a través de embriones y con un cuidado sanitario permanente, nos ha permitido lograr ",
+        "2": "animales de alta competencia.",
+        "3": "Con la dedicación permanente de los veterinarios y nuestros audaces domadores y pilotos, hemos cubierto todas las etapas de la cría de Polo Argentino, entregando a doma y hechura ",
+        "4": "futuros campeones."
+      },
+      "proud": {
+        "1": "Estamos orgullosos del arduo trabajo de toda la gente que integra este ",
+        "2": "gran equipo."
+      }
+    },
+    "polo": {
+      "title": "Polo",
+      "subtitle": {
+        "1": "El polo en EL FARO nació como una ",
+        "2": "necesidad inmediata de volcar al deporte nuestra cría de caballos. ",
+        "3": "Logramos con gran esfuerzo convertirnos un destino inigualable para la práctica del deporte, siendo un club oficial de la Asociación Argentina de Polo desde el año 2021."
+      },
+      "subtitle2": "Contamos con las dos primeras canchas de polo en Argentina de bermuda Celebration con medidas de 275 mts por 146 mts y todas las instalaciones para la alta competencia.",
+      "parag1": "Trabajando constantemente para la práctica segura del deporte, nuestras canchas se han diseñado sobre base de arena, cuidando cautelosamente los recursos naturales de EL FARO. El trabajo comprometido y detallista en el mantenimiento de las canchas se realiza durante todo el año.",
+      "parag2": "Nuestro afán por mejorar y nuestra pasión por innovar nos llevó a tener las primeras canchas de polo del mundo con riego solar. La sustentabilidad y la ecología son valores innatos en EL FARO, y decidimos aplicar energía renovable para cuidar nuestras canchas y el medio ambiente.",
+      "parag3": "Ponemos lo mejor de nosotros en todos los eslabones necesarios para el correcto desarrollo del polo. Creemos que el deporte forja el espíritu, afianza amistades duraderas y genera equipos comprometidos."
+    },
+    "tech": {
+      "title": "Tecnología",
+      "subtitle": {
+        "1": "En EL FARO, la búsqueda insistente por mejorar, nos lleva a apoyarnos en el ",
+        "2": "uso de la tecnología en todos los ámbitos.",
+        "3": "La tecnología es una herramienta en la cual creemos y utilizamos, apoyándonos en sus diferentes usos constantemente, utilizándola como ",
+        "4": "base del crecimiento a largo plazo.",
+        "5": "A través de la tecnología, aplicamos diversidad genética para la mejora continua de nuestras pasturas y ",
+        "6": "mejoramos la base nutricional para la cría sostenible de nuestros animales en el tiempo."
+      },
+      "parag1": "La investigación y desarrollo en la cruza de ADN, nos ha permitido mejorar la sangre de nuestros equinos y bovinos. Logramos de esta manera avanzar en el desafío de ofrecer ejemplares destacados en las dos razas, posicionando nuestra cría en lo más alto de la oferta zonal.",
+      "parag2": "Nuestra misión es ser sustentables en el tiempo, protegiendo cuidadosamente el medioambiente. La generación de energía renovable, utilizando los más modernos instrumentos, nos ha permitido dar un paso hacia un futuro prometedor para las mejoras continuas de nuestros recursos naturales.",
+      "parag3": {
+        "1": "Gracias a esta visión y aplicando la tecnología para la producción de nuevas variedades, nos hemos convertido en los primeros en incursionar en la siembra de palta Hass fuera de su zona núcleo.",
+        "2": "Combinando la energía renovable con riego inteligente pudimos avanzar con este proyecto que sin dudas dará buenos frutos en un futuro cercano."
+      }
+    },
+    "signin": {
+      "title": "Iniciar Sesión",
+      "name": "Usuario",
+      "password": "Contraseña",
+      "button": "Ingresar"
+    }
+  },
+  "footer": {
+    "contact": "Contactanos para más info",
+    "name": "Nombre",
+    "email": "Email",
+    "button": "Enviar",
+    "success": "¡Gracias por tu interés! Nos pondremos en contacto con vos.",
+    "error": "Ocurrió un error. Por favor intentá denuevo."
+  }
+}

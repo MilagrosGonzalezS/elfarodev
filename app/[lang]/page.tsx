@@ -1,5 +1,8 @@
 'use client'
 
+import { Locale } from '@/i18n.config'
+import { getDictionary } from '@/lib/dictionary'
+
 import MalletsLogo from '@/public/imgs/mallets.webp'
 import OakmontLogo from '@/public/imgs/oakmont.webp'
 import NetzchLogo from '@/public/imgs/netzch.webp'
@@ -9,7 +12,12 @@ import { motion } from 'motion/react'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Link from 'next/link'
 
-export default function Home() {
+export default async function Home({
+  params: { lang }
+}: {
+  params: { lang: Locale }
+}) {
+  const { page } = await getDictionary(lang)
   return (
     <>
       <section className='home-bg min-h-screen w-full'>
@@ -21,7 +29,7 @@ export default function Home() {
             viewport={{ once: true }}
             className='text-5xl font-bold md:w-1/2 md:text-6xl'
           >
-            Una nueva temporada de verano comienza
+            {page.home.title}
           </motion.h1>
         </div>
       </section>
@@ -35,9 +43,7 @@ export default function Home() {
             viewport={{ once: true }}
             className='bold mb-12 w-full text-center text-2xl text-foreground md:w-4/5'
           >
-            El Faro Polo está ubicado en Gral. Lavalle, a 3 minutos de la playa,
-            muy cerca de Costa Esmeralda, Pinamar y Cariló, y a 4 horas de la
-            ciudad de Buenos Aires.
+            {page.home.subtitle}
           </motion.h2>
           <motion.div
             initial={{ opacity: 0 }}
@@ -49,7 +55,7 @@ export default function Home() {
             <AspectRatio ratio={16 / 9} className='bg-muted'>
               <iframe
                 className='h-full w-full'
-                src='https://www.youtube.com/embed/jj6Yzpwko4M?si=cMuLh_-6LJGcr-3m'
+                src='https://www.youtube.com/embed/jj6Yzpwko4M?si=cMuLh_-6LJGcr-3'
                 title='El Faro desde arriba'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
                 referrerPolicy='strict-origin-when-cross-origin'
@@ -69,8 +75,8 @@ export default function Home() {
             viewport={{ once: true }}
             className='text-4xl md:w-1/2 md:text-5xl'
           >
-            <span className='text-accent'>Club Oficial</span> de la Asociación
-            Argentina de Polo (AAP)
+            <span className='text-accent'>{page.home.club}</span>
+            {page.home.aap}
           </motion.h3>
           <div className='md:w-1/2'>
             <motion.p
@@ -80,7 +86,7 @@ export default function Home() {
               viewport={{ once: true }}
               className='text-2xl md:text-right md:text-3xl'
             >
-              2 canchas de polo oficiales
+              {page.home.redp1}
             </motion.p>
             <motion.p
               initial={{ translateX: 20, opacity: 0 }}
@@ -89,7 +95,7 @@ export default function Home() {
               viewport={{ once: true }}
               className='text-2xl md:text-right md:text-3xl'
             >
-              Lugar para +200 caballos
+              {page.home.redp2}
             </motion.p>
           </div>
         </div>
@@ -104,9 +110,9 @@ export default function Home() {
             viewport={{ once: true }}
             className='light text-center text-2xl italic md:w-2/3 md:text-4xl'
           >
-            Somos el primer campo deportivo{' '}
-            <span className='text-accent'>eco friendly</span> con riego por
-            energía renovable
+            {page.home.ecofriendly1}{' '}
+            <span className='text-accent'>{page.home.ecofriendly2}</span>
+            {page.home.ecofriendly3}
           </motion.h3>
         </div>
       </section>

@@ -1,0 +1,119 @@
+{
+  "navigation": {
+    "about": "About us",
+    "breed": "Breeding",
+    "polo": "Polo",
+    "tech": "Technology"
+  },
+  "page": {
+    "home": {
+      "title": "A new summer season begins",
+      "subtitle": "Faro Polo is located in Gral. Lavalle, 3 minutes from the beach, very close to Costa Esmeralda, Pinamar and Cariló, and 4 hours from the city of Buenos Aires.",
+      "club": "Official Club",
+      "aap": " of the Argentine Polo Association (AAP)",
+      "redp1": "2 official polo fields",
+      "redp2": "Place for +200 horses",
+      "ecofriendly1": "We are the first",
+      "ecofriendly2": " eco-friendly",
+      "ecofriendly3": " sports field with irrigation by renewable energy"
+    },
+    "about": {
+      "title": "About us",
+      "subtitle1": {
+        "1": "EL FARO is a ",
+        "2": "team of professionals ",
+        "3": "dedicated to the permanent search for excellence, applying knowledge and innovation in each activity carried out."
+      },
+      "subtitle2": {
+        "1": "The initial objective was to ",
+        "2": "achieve an establishment for breeding horses and cattle, ",
+        "3": "focusing on the Argentine Polo breed and on the Hereford breed. Always working with high standards in animal care, nutrition and genetic improvement."
+      },
+      "carousel": "In the constant search to improve both activities, we work closely with the AACH (Argentine Association of Hereford Breeders) and we have also set aside an area for the development of Polo, with El Faro now being an official club of the AAP (Argentine Polo Association).",
+      "challenge": {
+        "1": "OUR",
+        "2": "challenge",
+        "3": "Improve the existing sandy soil to achieve a forage supply tailored to the quality of our farms. Great dedication is being put into green fodder and pastures to achieve proper nutrition."
+      },
+      "palta": {
+        "1": "With the same spirit and passion that has characterized us since the beginning of EL FARO, we have also ventured into the production of Hass avocados. ",
+        "2": "We are the only establishment in the area that has applied the work of a great team to innovate in its crops, ",
+        "3": "once again leading the way in the constant search for productive excellence."
+      },
+      "panels": {
+        "1": "",
+        "2": "Technology ",
+        "3": "is a tool that we constantly rely on, using it as a basis for long-term growth. ",
+        "4": "Our mission is to be sustainable ",
+        "5": "over time, while carefully protecting the environment.",
+        "6": "The generation of renewable energy, ",
+        "7": "using the most modern instruments, has allowed us to take a step towards a promising future for the continuous ",
+        "8": "improvement of our natural resources."
+      },
+      "passion": "We are synonymous of passion, innovation, teamwork and care for the environment."
+    },
+    "breed": {
+      "title": "Breeding",
+      "subtitle": {
+        "1": "THE BREEDING of the ",
+        "2": "Polo Argentino horse breed ",
+        "3": "and the Hereford bovine breed leads us to work on every detail of the process."
+      },
+      "parag1": "We work at each stage together with our teams of agricultural engineers and veterinarians, combining the passion to improve our genetics day by day. Through nutritional improvement, with sustainable investments in our forages for the pregnancy stages, and the care of each animal from gestation, we have managed to produce first-class specimens.",
+      "parag2": "By carefully selecting our breeding stock together with the Argentine Hereford Breeders Association, EL FARO has become a benchmark in the area for its Pure Registered Bulls and Heifers, strengthening the breed and achieving high-class herds.",
+      "parag3": {
+        "1": "The management of herds of horses, combining genetics through embryos and with permanent health care, has allowed us to achieve ",
+        "2": "highly competitive animals.",
+        "3": " With the permanent dedication of veterinarians and our bold trainers and pilots, we have covered all the stages of breeding Argentine Polo, delivering ",
+        "4": "future champions in training and breeding."
+      },
+      "proud": {
+        "1": "We are proud of the hard work of all the people who make up this ",
+        "2": "great team."
+      }
+    },
+    "polo": {
+      "title": "Polo",
+      "subtitle": {
+        "1": "Polo at EL FARO was born as an ",
+        "2": "immediate need to turn our horse breeding into sport. ",
+        "3": "With great effort, we managed to become an unrivaled destination for the practice of sport, being an official club of the Argentine Polo Association since 2021."
+      },
+      "subtitle2": "We have the first two Celebration bermuda polo fields in Argentina measuring 275m by 146m and all the facilities for high-level competition",
+      "parag1": "Constantly working for the safe practice of the sport, our fields have been designed on a sand base, carefully taking care of the natural resources of EL FARO. The committed and detailed work in the maintenance of the fields is carried out throughout all the year.",
+      "parag2": "Our desire to improve and our passion for innovation led us to have the first polo fields in the world with solar irrigation. Sustainability and ecology are innate values ​​at EL FARO, and we decided to apply renewable energy to take care of our fields and the environment.",
+      "parag3": "We put our best into all the necessary stages of the process for the right development of polo. We believe that sport forges the spirit, strengthens lasting friendships and creates committed teams."
+    },
+    "tech": {
+      "title": "Technology",
+      "subtitle": {
+        "1": "At EL FARO, the persistent search for improvement leads us to rely on the ",
+        "2": "use of technology in all areas.",
+        "3": "Technology is a tool in which we believe and use, constantly relying on its different uses, using it as a ",
+        "4": "basis for long-term growth.",
+        "5": "Through technology, we apply genetic diversity for the continuous ",
+        "6": "improvement of our pastures and enhance the nutritional basis for the sustainable breeding of our animals over time."
+      },
+      "parag1": "Research and development in DNA crossbreeding has allowed us to improve the blood of our horses and cattle. In this way, we have managed to advance in the challenge of offering outstanding specimens in both breeds, positioning our breeding at the top of the nearby offer.",
+      "parag2": "Our mission is to be sustainable over time, carefully protecting the environment. The production of renewable energy, using the most modern instruments, has allowed us to take a step towards a promising future for the continuous improvement of our natural resources.",
+      "parag3": {
+        "1": "Thanks to this vision and applying technology to the production of new varieties, we have become the first to venture into the planting of Hass avocados outside of their core area. ",
+        "2": "By combining renewable energy with smart irrigation we were able to move forward with this project that will undoubtedly bear good fruit in the near future."
+      }
+    },
+    "signin": {
+      "title": "Sign in",
+      "name": "Username",
+      "password": "Password",
+      "button": "Send"
+    }
+  },
+  "footer": {
+    "contact": "Contact us for more information",
+    "name": "Name",
+    "email": "Email",
+    "button": "Send",
+    "success": "Thank you for your interest! We will be back to you soon.",
+    "error": "An error occurred. Please try again"
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { Locale, i18n } from '@/i18n.config'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { cn } from '@/lib/utils'
 
@@ -34,13 +35,19 @@ export const metadata: Metadata = {
     'Somos sinónimo de pasión, innovación, trabajo en equipo y cuidado del medio ambiente.'
 }
 
+export async function generateStaticParams() {
+  return i18n.locales.map(locale => ({ lang: locale }))
+}
+
 export default function RootLayout({
-  children
-}: Readonly<{
+  children,
+  params
+}: {
   children: React.ReactNode
-}>) {
+  params: { lang: Locale }
+}) {
   return (
-    <html lang='en' className='scroll-smooth' suppressHydrationWarning>
+    <html lang={params.lang} className='scroll-smooth' suppressHydrationWarning>
       <body
         className={cn(
           'flex min-h-screen flex-col',
@@ -51,7 +58,7 @@ export default function RootLayout({
         )}
       >
         <Providers>
-          <Header />
+          <Header lang={params.lang} />
           <main className='grow'>{children}</main>
           <Link href='https://wa.me/+5491122726388'>
             <div className='fixed bottom-6 right-6 flex h-16 w-16 items-center justify-center rounded-full bg-secondary transition hover:scale-110'>

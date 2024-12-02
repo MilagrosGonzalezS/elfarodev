@@ -3,8 +3,15 @@ import { motion } from 'motion/react'
 import Image from 'next/image'
 import tech1 from '@/public/imgs/tech1.webp'
 import tech2 from '@/public/imgs/tech2.webp'
+import { Locale } from '@/i18n.config'
+import { getDictionary } from '@/lib/dictionary'
 
-const Tech = () => {
+export default async function Tech({
+  params: { lang }
+}: {
+  params: { lang: Locale }
+}) {
+  const { page } = await getDictionary(lang)
   return (
     <>
       <section className='tech-bg min-h-screen'>
@@ -16,7 +23,7 @@ const Tech = () => {
             viewport={{ once: true }}
             className='text-center text-6xl font-bold md:text-8xl'
           >
-            Tecnología
+            {page.tech.title}
           </motion.h1>
         </div>
       </section>
@@ -30,11 +37,8 @@ const Tech = () => {
             viewport={{ once: true }}
             className='bold text-lg md:text-xl'
           >
-            En EL FARO, la búsqueda insistente por mejorar, nos lleva a
-            apoyarnos en el{' '}
-            <span className='text-accent'>
-              uso de la tecnología en todos los ámbitos.
-            </span>
+            {page.tech.subtitle[1]}{' '}
+            <span className='text-accent'>{page.tech.subtitle[2]}</span>
           </motion.p>
           <motion.p
             initial={{ translateY: 20, opacity: 0 }}
@@ -43,11 +47,8 @@ const Tech = () => {
             viewport={{ once: true }}
             className='bold text-lg md:text-xl'
           >
-            La tecnología es una herramienta en la cual creemos y utilizamos,
-            apoyándonos en sus diferentes usos constantemente, utilizándola como{' '}
-            <span className='text-accent'>
-              base del crecimiento a largo plazo.
-            </span>
+            {page.tech.subtitle[3]}{' '}
+            <span className='text-accent'>{page.tech.subtitle[4]}</span>
           </motion.p>
           <motion.p
             initial={{ translateY: 20, opacity: 0 }}
@@ -56,12 +57,8 @@ const Tech = () => {
             viewport={{ once: true }}
             className='bold text-lg md:text-xl'
           >
-            A través de la tecnología, aplicamos diversidad genética para la
-            mejora continua de nuestras pasturas y{' '}
-            <span className='text-accent'>
-              mejoramos la base nutricional para la cría sostenible de nuestros
-              animales en el tiempo.
-            </span>
+            {page.tech.subtitle[5]}{' '}
+            <span className='text-accent'>{page.tech.subtitle[6]}</span>
           </motion.p>
         </div>
       </section>
@@ -94,11 +91,7 @@ const Tech = () => {
               viewport={{ once: true }}
               className='bold text-xl md:text-2xl'
             >
-              La investigación y desarrollo en la cruza de ADN, nos ha permitido
-              mejorar la sangre de nuestros equinos y bovinos. Logramos de esta
-              manera avanzar en el desafío de ofrecer ejemplares destacados en
-              las dos razas, posicionando nuestra cría en lo más alto de la
-              oferta zonal.
+              {page.tech.parag1}
             </motion.p>
             <motion.p
               initial={{ translateY: 20, opacity: 0 }}
@@ -107,11 +100,7 @@ const Tech = () => {
               viewport={{ once: true }}
               className='bold text-xl md:text-2xl'
             >
-              Nuestra misión es ser sustentables en el tiempo, protegiendo
-              cuidadosamente el medioambiente. La generación de energía
-              renovable, utilizando los más modernos instrumentos, nos ha
-              permitido dar un paso hacia un futuro prometedor para las mejoras
-              continuas de nuestros recursos naturales.
+              {page.tech.parag2}
             </motion.p>
           </div>
         </div>
@@ -126,19 +115,11 @@ const Tech = () => {
             viewport={{ once: true }}
             className='text-lg md:text-xl'
           >
-            Gracias a esta visión y aplicando la tecnología para la producción
-            de nuevas variedades, nos hemos convertido en los primeros en
-            incursionar en la siembra de palta Hass fuera de su zona núcleo.{' '}
-            <span className='bold text-accent'>
-              Combinando la energía renovable con riego inteligente pudimos
-              avanzar con este proyecto que sin dudas dará buenos frutos en un
-              futuro cercano.
-            </span>
+            {page.tech.parag3[1]}{' '}
+            <span className='bold text-accent'>{page.tech.parag3[2]}</span>
           </motion.p>
         </div>
       </section>
     </>
   )
 }
-
-export default Tech

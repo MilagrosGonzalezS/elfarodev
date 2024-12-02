@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@formatjs/intl-localematcher':
+        specifier: ^0.5.8
+        version: 0.5.8
       '@fortawesome/fontawesome-svg-core':
         specifier: ^6.7.1
         version: 6.7.1
@@ -53,6 +56,9 @@ importers:
       motion:
         specifier: ^11.11.17
         version: 11.11.17(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      negotiator:
+        specifier: ^1.0.0
+        version: 1.0.0
       next:
         specifier: 14.2.11
         version: 14.2.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -93,6 +99,9 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
+      '@types/negotiator':
+        specifier: ^0.6.3
+        version: 0.6.3
       '@types/node':
         specifier: ^22.5.5
         version: 22.5.5
@@ -156,6 +165,9 @@ packages:
   '@eslint/plugin-kit@0.1.0':
     resolution: {integrity: sha512-autAXT203ixhqei9xt+qkYOvY8l6LAFIdT2UXc/RPNeUVfqRF1BV94GTJyVPFKT8nFM6MyVJhjLj9E8JWvf5zQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@formatjs/intl-localematcher@0.5.8':
+    resolution: {integrity: sha512-I+WDNWWJFZie+jkfkiK5Mp4hEDyRSEvmyfYadflOno/mmKJKcB17fEpEH0oJu/OWhhCJ8kJBDz2YMd/6cDl7Mg==}
 
   '@fortawesome/fontawesome-common-types@6.7.1':
     resolution: {integrity: sha512-gbDz3TwRrIPT3i0cDfujhshnXO9z03IT1UKRIVi/VEjpNHtSBIP2o5XSm+e816FzzCFEzAxPw09Z13n20PaQJQ==}
@@ -618,6 +630,9 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+
+  '@types/negotiator@0.6.3':
+    resolution: {integrity: sha512-JkXTOdKs5MF086b/pt8C3+yVp3iDUwG635L7oCH6HvJvvr6lSUU5oe/gLXnPEfYRROHjJIPgCV6cuAg8gGkntQ==}
 
   '@types/node@22.5.5':
     resolution: {integrity: sha512-Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==}
@@ -1632,6 +1647,10 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
+  negotiator@1.0.0:
+    resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
+    engines: {node: '>= 0.6'}
+
   next-themes@0.3.0:
     resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
     peerDependencies:
@@ -2322,6 +2341,10 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
+  '@formatjs/intl-localematcher@0.5.8':
+    dependencies:
+      tslib: 2.7.0
+
   '@fortawesome/fontawesome-common-types@6.7.1': {}
 
   '@fortawesome/fontawesome-svg-core@6.7.1':
@@ -2683,6 +2706,8 @@ snapshots:
   '@types/json-schema@7.0.15': {}
 
   '@types/json5@0.0.29': {}
+
+  '@types/negotiator@0.6.3': {}
 
   '@types/node@22.5.5':
     dependencies:
@@ -3896,6 +3921,8 @@ snapshots:
   nanoid@3.3.7: {}
 
   natural-compare@1.4.0: {}
+
+  negotiator@1.0.0: {}
 
   next-themes@0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

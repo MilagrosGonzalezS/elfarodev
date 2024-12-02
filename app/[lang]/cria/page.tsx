@@ -3,8 +3,15 @@ import { motion } from 'motion/react'
 import Image from 'next/image'
 import cria1 from '@/public/imgs/cria1.webp'
 import cria2 from '@/public/imgs/cria2.webp'
+import { Locale } from '@/i18n.config'
+import { getDictionary } from '@/lib/dictionary'
 
-const Cria = () => {
+export default async function Cria({
+  params: { lang }
+}: {
+  params: { lang: Locale }
+}) {
+  const { page } = await getDictionary(lang)
   return (
     <>
       <section className='cria-bg min-h-screen'>
@@ -16,7 +23,7 @@ const Cria = () => {
             viewport={{ once: true }}
             className='text-center text-6xl font-bold md:text-8xl'
           >
-            Cría
+            {page.breed.title}
           </motion.h1>
         </div>
       </section>
@@ -30,10 +37,9 @@ const Cria = () => {
             viewport={{ once: true }}
             className='bold text-lg md:text-xl'
           >
-            LA CRIA de la
-            <span className='text-accent'> raza equina Polo Argentino</span> y
-            la raza bovina Hereford, nos conduce a trabajar en cada detalle del
-            proceso.
+            {page.breed.subtitle[1]}
+            <span className='text-accent'>{page.breed.subtitle[2]}</span>
+            {page.breed.subtitle[3]}
           </motion.p>
         </div>
       </section>
@@ -58,12 +64,7 @@ const Cria = () => {
               className='flex-1 md:px-16'
             >
               <p className='text-xl text-foreground md:text-2xl'>
-                Trabajamos en cada etapa junto con nuestros equipos de
-                ingenieros agrónomos y veterinarios, combinando la pasión por
-                mejorar día a día nuestra genética. A través de la mejora
-                nutricional, con inversiones sustentables en nuestros forrajes
-                para las etapas de preñez, y el cuidado de cada animal desde su
-                gestación, hemos logrado producir ejemplares de primer nivel.
+                {page.breed.parag1}
               </p>
             </motion.div>
           </div>
@@ -76,11 +77,7 @@ const Cria = () => {
               className='flex-1 md:px-16'
             >
               <p className='text-xl text-foreground md:text-2xl'>
-                Haciendo una selección cuidadosa de nuestra cría junto a la
-                Asociación Argentina Criadores de Hereford EL FARO se ha
-                convertido en un referente en la zona por sus Toros y
-                Vaquillonas Puro Registrado, afianzando la raza y logrando
-                planteles de gran categoría.
+                {page.breed.parag2}
               </p>
             </motion.div>
             <motion.div
@@ -111,14 +108,10 @@ const Cria = () => {
             viewport={{ once: true }}
             className='bold text-center text-xl md:w-4/5 md:text-2xl'
           >
-            El manejo de las manadas de caballos, combinando genética a través
-            de embriones y con un cuidado sanitario permanente, nos ha permitido
-            lograr{' '}
-            <span className='text-accent'>animales de alta competencia.</span>{' '}
-            Con la dedicación permanente de los veterinarios y nuestros audaces
-            domadores y pilotos, hemos cubierto todas las etapas de la cría de
-            Polo Argentino, entregando a doma y hechura{' '}
-            <span className='text-accent'>futuros campeones.</span>
+            {page.breed.parag3[1]}{' '}
+            <span className='text-accent'>{page.breed.parag3[2]}</span>{' '}
+            {page.breed.parag3[3]}{' '}
+            <span className='text-accent'>{page.breed.parag3[4]}</span>
           </motion.p>
         </div>
       </motion.section>
@@ -132,13 +125,11 @@ const Cria = () => {
             viewport={{ once: true }}
             className='light text-center text-2xl italic md:w-2/3 md:text-4xl'
           >
-            Estamos orgullosos del arduo trabajo de toda la gente que integra
-            este <span className='bold'>gran equipo.</span>
+            {page.breed.proud[1]}
+            <span className='bold'>{page.breed.proud[2]}</span>
           </motion.p>
         </div>
       </section>
     </>
   )
 }
-
-export default Cria

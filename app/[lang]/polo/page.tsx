@@ -5,8 +5,15 @@ import polo1 from '@/public/imgs/polo1.webp'
 import polo2 from '@/public/imgs/polo2.webp'
 import polo3 from '@/public/imgs/polo3.webp'
 import palos from '@/public/imgs/palos.webp'
+import { Locale } from '@/i18n.config'
+import { getDictionary } from '@/lib/dictionary'
 
-const Polo = () => {
+export default async function Polo({
+  params: { lang }
+}: {
+  params: { lang: Locale }
+}) {
+  const { page } = await getDictionary(lang)
   return (
     <>
       <section className='polo-bg min-h-screen'>
@@ -18,7 +25,7 @@ const Polo = () => {
             viewport={{ once: true }}
             className='text-center text-6xl font-bold md:text-8xl'
           >
-            Polo
+            {page.polo.title}
           </motion.h1>
         </div>
       </section>
@@ -32,14 +39,9 @@ const Polo = () => {
             viewport={{ once: true }}
             className='bold text-lg md:text-xl'
           >
-            El polo en EL FARO nació como una
-            <span className='text-accent'>
-              {' '}
-              necesidad inmediata de volcar al deporte nuestra cría de caballos.{' '}
-            </span>{' '}
-            Logramos con gran esfuerzo convertirnos un destino inigualable para
-            la práctica del deporte, siendo un club oficial de la Asociación
-            Argentina de Polo desde el año 2021.
+            {page.polo.subtitle[1]}
+            <span className='text-accent'> {page.polo.subtitle[2]} </span>{' '}
+            {page.polo.subtitle[3]}
           </motion.p>
         </div>
       </section>
@@ -81,10 +83,9 @@ const Polo = () => {
               whileInView={{ translateY: 0, opacity: 1 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
-              className='bold my-8 text-center text-3xl italic text-foreground md:w-2/3 md:text-4xl'
+              className='bold my-8 text-center text-2xl italic text-foreground md:w-2/3 md:text-4xl'
             >
-              Contamos con las dos primeras canchas de polo en Argentina de
-              bermuda Celebration
+              {page.polo.subtitle2}
             </motion.h2>
             <motion.p
               initial={{ translateY: 20, opacity: 0 }}
@@ -93,12 +94,7 @@ const Polo = () => {
               viewport={{ once: true }}
               className='text-center text-xl text-foreground md:w-2/3'
             >
-              con medidas de 275 mts por 146 mts y todas las instalaciones para
-              la alta competencia. Trabajando constantemente para la práctica
-              segura del deporte, nuestras canchas se han diseñado sobre base de
-              arena, cuidando cautelosamente los recursos naturales de EL FARO.
-              El trabajo comprometido y detallista en el mantenimiento de las
-              canchas se realiza durante todo el año.
+              {page.polo.parag1}
             </motion.p>
           </div>
         </div>
@@ -119,11 +115,7 @@ const Polo = () => {
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
-            Nuestro afán por mejorar y nuestra pasión por innovar nos llevó a
-            tener las primeras canchas de polo del mundo con riego solar. La
-            sustentabilidad y la ecología son valores innatos en EL FARO, y
-            decidimos aplicar energía renovable para cuidar nuestras canchas y
-            el medio ambiente.
+            {page.polo.parag2}
           </motion.p>
           <motion.p
             initial={{ translateY: 20, opacity: 0 }}
@@ -131,15 +123,10 @@ const Polo = () => {
             transition={{ duration: 1, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Ponemos lo mejor de nosotros en todos los eslabones necesarios para
-            el correcto desarrollo del polo. Creemos que el deporte forja el
-            espíritu, afianza amistades duraderas y genera equipos
-            comprometidos.
+            {page.polo.parag3}
           </motion.p>
         </div>
       </section>
     </>
   )
 }
-
-export default Polo

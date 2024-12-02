@@ -6,6 +6,8 @@ import {
   CarouselItem
 } from '@/components/ui/carousel'
 import Autoplay from 'embla-carousel-autoplay'
+import { Locale } from '@/i18n.config'
+import { getDictionary } from '@/lib/dictionary'
 
 import image1 from '@/public/imgs/nosotros.webp'
 import image2 from '@/public/imgs/nosotros2.webp'
@@ -15,7 +17,12 @@ import hereford from '@/public/imgs/hereford.webp'
 import aap from '@/public/imgs/aap.webp'
 import panels from '@/public/imgs/panels.webp'
 
-const About = () => {
+export default async function About({
+  params: { lang }
+}: {
+  params: { lang: Locale }
+}) {
+  const { page } = await getDictionary(lang)
   return (
     <>
       <section className='about-bg min-h-screen'>
@@ -27,7 +34,7 @@ const About = () => {
             viewport={{ once: true }}
             className='text-center text-6xl font-bold md:text-8xl'
           >
-            Nosotros
+            {page.about.title}
           </motion.h1>
         </div>
       </section>
@@ -41,10 +48,9 @@ const About = () => {
             viewport={{ once: true }}
             className='bold text-lg md:text-xl'
           >
-            El FARO es un{' '}
-            <span className='text-accent'>equipo de profesionales</span>{' '}
-            dedicados a la permanente búsqueda de la excelencia, aplicando
-            conocimientos e innovación en cada actividad que se realiza.
+            {page.about.subtitle1[1]}{' '}
+            <span className='text-accent'>{page.about.subtitle1[2]}</span>{' '}
+            {page.about.subtitle1[3]}
           </motion.p>
           <motion.p
             initial={{ translateY: 20, opacity: 0 }}
@@ -53,13 +59,9 @@ const About = () => {
             viewport={{ once: true }}
             className='bold text-lg md:text-xl'
           >
-            El objetivo inicial fue{' '}
-            <span className='text-accent'>
-              lograr un establecimiento para cría de equinos y bovinos,
-            </span>{' '}
-            enfocándonos en la raza Polo Argentino y también en la raza
-            Hereford. Trabajando siempre con altos estándares en el cuidado
-            animal, la nutrición y la mejora genética.
+            {page.about.subtitle2[1]}{' '}
+            <span className='text-accent'>{page.about.subtitle2[2]}</span>{' '}
+            {page.about.subtitle2[3]}
           </motion.p>
         </div>
       </section>
@@ -144,11 +146,7 @@ const About = () => {
               viewport={{ once: true }}
               className='text-center text-lg text-foreground'
             >
-              En la constante búsqueda por mejorar ambas actividades, trabajamos
-              estrechamente con la AACH (Asociación Argentina Criadores de
-              Hereford) y también hemos destinado un área para el desarrollo del
-              Polo, siendo hoy El Faro un club oficial de la AAP (Asociación
-              Argentina de Polo).
+              {page.about.carousel}
             </motion.p>
           </div>
         </div>
@@ -164,7 +162,7 @@ const About = () => {
               viewport={{ once: true }}
               className='light text-3xl'
             >
-              NUESTRO
+              {page.about.challenge[1]}
             </motion.span>
             <motion.h3
               initial={{ translateX: -20, opacity: 0 }}
@@ -173,7 +171,7 @@ const About = () => {
               viewport={{ once: true }}
               className='text-8xl'
             >
-              desafío
+              {page.about.challenge[2]}
             </motion.h3>
           </div>
           <div className='flex-1'>
@@ -184,10 +182,7 @@ const About = () => {
               viewport={{ once: true }}
               className='text-2xl'
             >
-              Mejorar el suelo arenoso existente para lograr una oferta
-              forrajera a medida de la calidad de nuestros planteles. Se trabaja
-              con gran dedicación en verdeos y pasturas para lograr la correcta
-              nutrición.
+              {page.about.challenge[3]}
             </motion.p>
           </div>
         </div>
@@ -202,15 +197,9 @@ const About = () => {
             viewport={{ once: true }}
             className='bold text-center text-2xl md:w-2/3'
           >
-            Con el mismo ánimo y pasión que nos caracteriza desde el origen de
-            EL FARO, también incursionamos en la producción de palta en su
-            variedad Hass.{' '}
-            <span className='text-accent'>
-              Somos el único establecimiento en la zona que ha aplicado el
-              trabajo de un gran equipo para innovar en sus cultivos,{' '}
-            </span>
-            logrando una vez más marcar el camino de la búsqueda constante de la
-            excelencia productiva.
+            {page.about.palta[1]}{' '}
+            <span className='text-accent'>{page.about.palta[2]} </span>
+            {page.about.palta[3]}
           </motion.p>
         </div>
       </section>
@@ -232,13 +221,11 @@ const About = () => {
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              La <span className='bold italic'>tecnología</span> es una
-              herramienta en la cual nos apoyamos constantemente, utilizándola
-              como base del crecimiento a largo plazo.{' '}
-              <span className='bold italic'>
-                Nuestra misión es ser sustentables
-              </span>{' '}
-              en el tiempo, protegiendo cuidadosamente el medioambiente.
+              {page.about.panels[1]}
+              <span className='bold italic'>{page.about.panels[2]}</span>
+              {page.about.panels[3]}{' '}
+              <span className='bold italic'>{page.about.panels[4]}</span>{' '}
+              {page.about.panels[5]}
             </motion.p>
             <motion.p
               initial={{ translateY: 20, opacity: 0 }}
@@ -246,14 +233,9 @@ const About = () => {
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <span className='bold italic'>
-                La generación de energía renovable,
-              </span>{' '}
-              utilizando los más modernos instrumentos, nos ha permitido dar un
-              paso hacia un futuro prometedor para las{' '}
-              <span className='bold italic'>
-                mejoras continuas de nuestros recursos naturales.
-              </span>
+              <span className='bold italic'>{page.about.panels[6]}</span>{' '}
+              {page.about.panels[7]}{' '}
+              <span className='bold italic'>{page.about.panels[8]}</span>
             </motion.p>
           </div>
         </div>
@@ -268,13 +250,10 @@ const About = () => {
             viewport={{ once: true }}
             className='light text-center text-3xl italic md:w-2/3 md:text-4xl'
           >
-            Somos sinónimo de pasión, innovación, trabajo en equipo y cuidado
-            del medio ambiente.
+            {page.about.passion}
           </motion.h4>
         </div>
       </section>
     </>
   )
 }
-
-export default About

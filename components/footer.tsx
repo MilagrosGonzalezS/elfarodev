@@ -13,7 +13,6 @@ import {
 import { Input } from './ui/input'
 import { z } from 'zod'
 import { toast } from 'sonner'
-import { motion } from 'motion/react'
 import { useForm } from 'react-hook-form'
 import { ContactFormSchema } from '@/lib/schema'
 import { contactFormAction } from '@/lib/actions'
@@ -21,10 +20,23 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Button } from './ui/button'
 import { Form, FormField } from './ui/form'
 import { FormItem, FormControl, FormMessage } from './ui/form'
+import { Locale } from '@/i18n.config'
+import { getDictionary } from '@/lib/dictionary'
+import { useEffect, useState } from 'react'
 
 type Inputs = z.infer<typeof ContactFormSchema>
 
 export default function Footer() {
+  // const [successMessage, setSuccessMessage] = useState('')
+  // const [errorMessage, setErrorMessage] = useState('')
+
+  // const { footer } = await getDictionary(lang)
+
+  // useEffect(() => {
+  //   setSuccessMessage(footer.success)
+  //   setErrorMessage(footer.error)
+  // }, [])
+
   const form = useForm<Inputs>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
@@ -37,11 +49,11 @@ export default function Footer() {
     const result = await contactFormAction(values)
 
     if (result?.error) {
-      toast.error('Ocurrió un error. Por favor intentá denuevo.')
+      toast.error('error')
       return
     }
 
-    toast.success(`¡Gracias por tu interés! Nos pondremos en contacto con vos.`)
+    toast.success('successMessage')
     form.reset()
   }
 
@@ -94,6 +106,7 @@ export default function Footer() {
         <div className='hidden h-16 w-[1px] bg-background md:block'></div>
         <div>
           <h5 className='mb-4 text-3xl font-bold text-accent'>
+            {/* {footer.contact} */}
             Contactanos para más info
           </h5>
           <Form {...form}>
@@ -108,7 +121,7 @@ export default function Footer() {
                 render={({ field }) => (
                   <FormItem className='flex-1'>
                     <FormControl>
-                      <Input placeholder='Nombre' {...field} />
+                      <Input placeholder={`Nombre`} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -122,7 +135,7 @@ export default function Footer() {
                 render={({ field }) => (
                   <FormItem className='flex-1'>
                     <FormControl>
-                      <Input placeholder='Email' {...field} />
+                      <Input placeholder={`Email`} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -137,7 +150,7 @@ export default function Footer() {
                     <span className='ml-2'>Enviando...</span>
                   </>
                 ) : (
-                  'Enviar'
+                  `Enviar`
                 )}
               </Button>
             </form>

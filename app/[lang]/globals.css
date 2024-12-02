@@ -61,18 +61,19 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('../app/fonts/helvetica-255-webfont/Helvetica.woff') format('woff');
+  src: url('../[lang]/fonts/helvetica-255-webfont/Helvetica.woff')
+    format('woff');
 }
 
 @font-face {
   font-family: 'Helvetica Bold';
-  src: url('../app/fonts/helvetica-255-webfont/Helvetica-Bold.woff')
+  src: url('../[lang]/fonts/helvetica-255-webfont/Helvetica-Bold.woff')
     format('woff');
 }
 
 @font-face {
   font-family: 'Helvetica Light';
-  src: url('../app/fonts/4215-font.otf') format('opentype');
+  src: url('../[lang]/fonts/4215-font.otf') format('opentype');
 }
 
 @layer base {
@@ -97,7 +98,7 @@ body {
 }
 
 .home-bg {
-  background-image: url('/imgs/hero-home.webp');
+  background-image: url('../../public/imgs/hero-home.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -105,63 +106,63 @@ body {
 }
 
 .about-bg {
-  background-image: url('/imgs/field.webp');
+  background-image: url('../../public/imgs/field.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .cria-bg {
-  background-image: url('/imgs/toros.jpeg');
+  background-image: url('../../public/imgs/toros.jpeg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .polo-bg {
-  background-image: url('/imgs/hero-polo.webp');
+  background-image: url('../../public/imgs/hero-polo.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .tech-bg {
-  background-image: url('/imgs/hero-tech.webp');
+  background-image: url('../../public/imgs/hero-tech.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .ecofriendly-bg {
-  background-image: url('/imgs/ecofriendly.webp');
+  background-image: url('../../public/imgs/ecofriendly.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .field-bg {
-  background-image: url('/imgs/palta.webp');
+  background-image: url('../../public/imgs/palta.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .nosotros-bg {
-  background-image: url('/imgs/nosotros-patas.webp');
+  background-image: url('../../public/imgs/nosotros-patas.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .manada-bg {
-  background-image: url('/imgs/hero-cria.webp');
+  background-image: url('../../public/imgs/hero-cria.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .members-bg {
-  background-image: url('/imgs/hero-about.webp');
+  background-image: url('../../public/imgs/hero-about.webp');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
