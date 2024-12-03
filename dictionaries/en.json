@@ -113,6 +113,7 @@
     "name": "Name",
     "email": "Email",
     "button": "Send",
+    "sending": "Sending...",
     "success": "Thank you for your interest! We will be back to you soon.",
     "error": "An error occurred. Please try again"
   }

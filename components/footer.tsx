@@ -1,5 +1,3 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from '@/public/imgs/El Faro Con Logo Texto Blanco.png'
@@ -10,52 +8,12 @@ import {
   faFacebook,
   faYoutube
 } from '@fortawesome/free-brands-svg-icons'
-import { Input } from './ui/input'
-import { z } from 'zod'
-import { toast } from 'sonner'
-import { useForm } from 'react-hook-form'
-import { ContactFormSchema } from '@/lib/schema'
-import { contactFormAction } from '@/lib/actions'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Button } from './ui/button'
-import { Form, FormField } from './ui/form'
-import { FormItem, FormControl, FormMessage } from './ui/form'
+import ContactForm from './contact-form'
 import { Locale } from '@/i18n.config'
 import { getDictionary } from '@/lib/dictionary'
-import { useEffect, useState } from 'react'
 
-type Inputs = z.infer<typeof ContactFormSchema>
-
-export default function Footer() {
-  // const [successMessage, setSuccessMessage] = useState('')
-  // const [errorMessage, setErrorMessage] = useState('')
-
-  // const { footer } = await getDictionary(lang)
-
-  // useEffect(() => {
-  //   setSuccessMessage(footer.success)
-  //   setErrorMessage(footer.error)
-  // }, [])
-
-  const form = useForm<Inputs>({
-    resolver: zodResolver(ContactFormSchema),
-    defaultValues: {
-      name: '',
-      email: ''
-    }
-  })
-
-  async function onSubmit(values: Inputs) {
-    const result = await contactFormAction(values)
-
-    if (result?.error) {
-      toast.error('error')
-      return
-    }
-
-    toast.success('successMessage')
-    form.reset()
-  }
+export default async function Footer({ lang }: { lang: Locale }) {
+  const { footer } = await getDictionary(lang)
 
   return (
     <footer className=''>
@@ -106,55 +64,16 @@ export default function Footer() {
         <div className='hidden h-16 w-[1px] bg-background md:block'></div>
         <div>
           <h5 className='mb-4 text-3xl font-bold text-accent'>
-            {/* {footer.contact} */}
-            Contactanos para más info
+            {footer.contact}
           </h5>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className='flex flex-col gap-4 md:flex-row'
-            >
-              {/* Campo de nombre */}
-              <FormField
-                control={form.control}
-                name='name'
-                render={({ field }) => (
-                  <FormItem className='flex-1'>
-                    <FormControl>
-                      <Input placeholder={`Nombre`} {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              {/* Campo de email */}
-              <FormField
-                control={form.control}
-                name='email'
-                render={({ field }) => (
-                  <FormItem className='flex-1'>
-                    <FormControl>
-                      <Input placeholder={`Email`} {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              {/* Botón de envío */}
-              <Button type='submit' variant='accent'>
-                {form.formState.isSubmitting ? (
-                  <>
-                    {/* <Spinner /> */}
-                    <span className='ml-2'>Enviando...</span>
-                  </>
-                ) : (
-                  `Enviar`
-                )}
-              </Button>
-            </form>
-          </Form>
+          <ContactForm
+            name={footer.name}
+            email={footer.email}
+            sending={footer.sending}
+            button={footer.button}
+            success={footer.success}
+            error={footer.error}
+          ></ContactForm>
         </div>
       </div>
       <div className='container flex items-center justify-center gap-x-3 gap-y-1 py-4 text-center text-sm text-muted-foreground'>

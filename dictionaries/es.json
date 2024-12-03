@@ -113,6 +113,7 @@
     "name": "Nombre",
     "email": "Email",
     "button": "Enviar",
+    "sending": "Enviando...",
     "success": "¡Gracias por tu interés! Nos pondremos en contacto con vos.",
     "error": "Ocurrió un error. Por favor intentá denuevo."
   }

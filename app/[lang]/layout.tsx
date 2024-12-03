@@ -65,7 +65,7 @@ export default function RootLayout({
               <FontAwesomeIcon icon={faWhatsapp} className='h-8 w-8' />
             </div>
           </Link>
-          <Footer />
+          <Footer lang={params.lang} />
         </Providers>
       </body>
     </html>
