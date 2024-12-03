@@ -20,7 +20,7 @@ export async function contactFormAction(data: ContactFormInputs) {
     const { name, email } = result.data
     const { data, error } = await resend.emails.send({
       from: 'El faro <onboarding@resend.dev>',
-      to: ['milagrosgonzalez.sa@gmail.com'],
+      to: ['info@elfaroarg.com'],
       subject: 'Nuevo contacto',
       react: ContactFormEmail({ name: name, email: email })
     })
