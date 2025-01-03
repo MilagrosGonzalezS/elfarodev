@@ -20,6 +20,7 @@ import CustomLink from './custom-link'
 
 export default async function Header({ lang }: { lang: Locale }) {
   const pathname = usePathname()
+
   const { navigation } = await getDictionary(lang)
   return (
     <header className='absolute inset-x-0 top-0 z-50 bg-transparent py-8'>
@@ -75,7 +76,7 @@ export default async function Header({ lang }: { lang: Locale }) {
           <LocaleSwitcher />
           <Link
             className='bold hidden rounded-sm bg-gray-400/20 px-6 py-2 text-sm hover:bg-gray-400/80 sm:flex'
-            href='/members'
+            href='/protected/client'
           >
             Members Only
           </Link>
@@ -121,7 +122,7 @@ export default async function Header({ lang }: { lang: Locale }) {
                   <SheetClose asChild>
                     <Link
                       className='bold block rounded-sm bg-gray-400/30 px-6 py-2 text-center'
-                      href='/members'
+                      href='/protected/client'
                     >
                       Members Only
                     </Link>

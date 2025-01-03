@@ -1,55 +1,42 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-
+import { usePathname, useRouter } from 'next/navigation'
 import { i18n } from '@/i18n.config'
+import { setCookie } from 'cookies-next'
 
 export default function LocaleSwitcher() {
   const pathName = usePathname()
+  const router = useRouter()
 
   const redirectedPathName = (locale: string) => {
-    if (!pathName) return '/'
+    if (!pathName) return `/${locale}`
 
-    const pathnameIsMissingLocale = i18n.locales.every(
-      locale => !pathName.startsWith(`/${locale}/`) && pathName !== `${locale}`
-    )
-
-    if (pathnameIsMissingLocale) {
-      if (locale === i18n.defaultLocale) return pathName
-      return `/${locale}${pathName}`
-    } else {
-      if (locale === i18n.defaultLocale) {
-        const segments = pathName.split('/')
-        const isHome = segments.length === 2
-        if (isHome) return '/'
-
-        segments.splice(1, 1)
-        return segments.join('/')
-      }
-      const segments = pathName.split('/')
-      segments[1] = locale
-      return segments.join('/')
-    }
+    const segments = pathName.split('/')
+    segments[1] = locale
+    return segments.join('/')
   }
 
-  const currentLocale =
-    i18n.locales.find(
-      locale => pathName.startsWith(`/${locale}/`) || pathName === `/${locale}`
-    ) || i18n.defaultLocale
+  const handleLocaleChange = (locale: string) => {
+    // Set the NEXT_LOCALE cookie
+    setCookie('NEXT_LOCALE', locale, { maxAge: 60 * 60 * 24 * 30 }) // 30 days
+
+    // Navigate to the new locale
+    router.push(redirectedPathName(locale))
+  }
 
   return (
     <ul className='flex gap-x-2'>
       {i18n.locales.map(locale => {
-        const isActive = locale === currentLocale
+        const isActive = pathName.startsWith(`/${locale}`)
         return (
           <li key={locale}>
-            <Link
-              href={redirectedPathName(locale)}
+            <button
+              onClick={() => handleLocaleChange(locale)}
               className={`rounded-md px-3 py-2 text-white ${isActive ? 'bg-gray-400/80' : 'bg-gray-400/20'} hover:bg-gray-400/80`}
             >
               {locale}
-            </Link>
+            </button>
           </li>
         )
       })}
